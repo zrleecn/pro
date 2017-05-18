@@ -134,7 +134,7 @@
             <lable>原价：</lable>
             <div class="form-group .user-input">
 
-                <input name="shop_price" class="col-xs-12 form-control old_price" type="text" placeholder="商品价格">
+                <input name="old_price" class="col-xs-12 form-control old_price" type="text" placeholder="商品价格">
                 <i class="fa fa-money" aria-hidden="true"></i>
                 <P class="help-block text">请输入正确的价格</P>
             </div>

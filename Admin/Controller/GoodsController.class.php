@@ -91,7 +91,7 @@ class GoodsController extends CommonController {
 
         }else{
             echo $file_upload->getError() ;
-            echo "<br><a href='__APP__/admin/goods/upload_goods'>返回</a>" ;
+            echo "<br><a href='upload_goods'>返回</a>" ;
         }
 
 
@@ -106,33 +106,50 @@ class GoodsController extends CommonController {
 
     public function delete_goods(){
         $m = M('goods') ;
+        //商品id
         $id = $_GET['goods_id'] ;
-       if($m->where("goods_id='$id'")->delete()){
+        //实例化商品模型
+        $goodsModel = M('goods') ;
+        $goods_data = $goodsModel->where("goods_id='$id'")->find() ;
 
-           //删除用户表对应的发布商品id
-           $user = M('user') ;
-           $uname = session('user_name') ;
+        //删除图片
+        if(unlink( "./Public/".$goods_data['thumb_image']) ){
+            if($m->where("goods_id='$id'")->delete()){
 
-           $public_id = $user->where("user_name='$uname'")->field('public_goods_id')->find() ;
-           //组织成数组
-           $arr_id = explode(',',$public_id['public_goods_id']) ;
-           $index = array_search($id , $arr_id) ;
-           if($index !== false) {
-               unset($arr_id[$index]);
-           }
-           $str_id = implode(',' , $arr_id) ;
-           $user = M('user');
-           $update['public_goods_id'] = $str_id ;
-           if($user->where("user_name='$uname'")->save($update) ){
-               $this->success('移除商品成功',U('Admin/Index/my'),1);
-           }else{
-               $this->error('移除失败！',U('Admin/Index/my') ,1);
+                //删除用户表对应的发布商品id
+                $user = M('user') ;
+                $uname = session('user_name') ;
 
-           }
+                $public_id = $user->where("user_name='$uname'")->field('public_goods_id')->find() ;
+                //组织成数组
+                $arr_id = explode(',',$public_id['public_goods_id']) ;
+                $index = array_search($id , $arr_id) ;
+                if($index !== false) {
+                    unset($arr_id[$index]);
+                }
+                $str_id = implode(',' , $arr_id) ;
+                $user = M('user');
+                $update['public_goods_id'] = $str_id ;
+                //更新用户发布商品的id
+                if($user->where("user_name='$uname'")->save($update) ){
 
-       }else{
-           $this->error('移除商品失败',U('Admin/Index/my'),1);
-       }
+
+                     $this->success('移除商品成功',U('Admin/Index/my'),1);
+                }else{
+                    $this->error('移除失败！',U('Admin/Index/my') ,1);
+
+                }
+
+            }else{
+                $this->error('移除商品失败',U('Admin/Index/my'),1);
+            }
+        }else{
+            $this->error('移除商品失败',U('Admin/Index/my'),1);
+        }
+
+
+
+
 
 
 
@@ -165,6 +182,13 @@ class GoodsController extends CommonController {
         }
 
 
+    }
+
+    public function test(){
+        $script_name = $_SERVER['SCRIPT_NAME'] ;
+
+        $rootpath = substr($script_name , 0 , strrpos($script_name , '/')+1) ;
+        echo $rootpath ;
     }
 
 }

@@ -87,7 +87,6 @@ CREATE TABLE `user` (
   `order_goods_id` VARCHAR(100) comment '订单商品的id')charset=utf8;
 
 -- test data
-INSERT INTO user (user_id,user_name,password,register_time,public_goods_id,collection_goods_id,is_active,email,tel_phone,qq_number,wechat,school_name ,head_portrait) VALUES (1,'zrlee','8f0f50d0cb6bef82dfd8ceafc4a12be4',1493397579,'8,9,10,11,12,13,15','8,9,12,13,15',1,'13005564315@163.com','13005564315','45418406','zrlee_cn','XXX大学','images/admin.png');
 INSERT INTO user (user_id,user_name,password,register_time,public_goods_id,collection_goods_id,is_active,email,tel_phone,qq_number,wechat,school_name,head_portrait) VALUES (3,'admin','8f0f50d0cb6bef82dfd8ceafc4a12be4',1493397579,'8,9,10,11,12,13,15','8,9,12,13,15',1,'13005564315@163.com','13005564315','45418406','zrlee_cn','XXX大学','images/admin.png');
 INSERT INTO user (user_id,user_name,password,register_time,public_goods_id,collection_goods_id,is_active,email,tel_phone,qq_number,wechat,school_name) VALUES (2,'sweetencounter','8f0f50d0cb6bef82dfd8ceafc4a12be4',1493397579,'1,2,3,4,5,6,7','8,9,10,11,12,13',1,'1316356119@qq.com','13005564315','45418406','zrlee_cn','XXX大学');
 INSERT INTO user (user_id,user_name,password,register_time,public_goods_id,collection_goods_id,is_active,email,tel_phone,qq_number,wechat,school_name) VALUES (4,'test','8f0f50d0cb6bef82dfd8ceafc4a12be4',1493397579,'','',1,'1316356119@qq.com','13005564315','45418406','zrlee_cn','广东石油化工学院');

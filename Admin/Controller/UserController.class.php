@@ -156,7 +156,7 @@ class UserController extends Controller{
     public function logout(){
         session_unset();
         session_destroy();
-        $this->redirect('Home/Index/myaccount','','2');
+        $this->success('已退出登录',U('Home/Index/myaccount'),1);
     }
 
     public function add_collect(){
