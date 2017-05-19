@@ -1,0 +1,101 @@
+[ 2017-05-19T12:18:32+08:00 ] ::1 /web/shop2/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000130s ]
+INFO: [ app_init ] --END-- [ RunTime:0.039253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017477s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0923s ]
+SQL: SELECT * FROM `goods` WHERE ( is_hot='1' ) ORDER BY goods_id desc  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.170958s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.171846s ]
+NOTIC: [8] Undefined variable: v D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 63 行.
+NOTIC: [8] Undefined variable: is_login D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 187 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [8] Undefined variable: arr_id D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 197 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.301705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.302157s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.038742s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.051889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.052520s ]
+
+[ 2017-05-19T12:18:37+08:00 ] ::1 /web/shop2/index.php/Home/Index/myaccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000987s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000418s ]
+NOTIC: [8] Undefined variable: user_name D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\b1ce3e92ab5b808ddb21be3f2191197b.php 第 197 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041339s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001612s ]
+
+[ 2017-05-19T12:18:38+08:00 ] ::1 /web/shop2/index.php/Home/Index/verify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001747s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003790s ]
+
+[ 2017-05-19T12:18:55+08:00 ] ::1 /web/shop2/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002096s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `goods` WHERE ( is_hot='1' ) ORDER BY goods_id desc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0090s ]
+SQL: SELECT `collection_goods_id` FROM `user` WHERE ( user_name='test' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000345s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000664s ]
+NOTIC: [8] Undefined variable: v D:\wamp-win10\www\web\shop2\Runtime\Cache\Home\fcec68853132fd31f32bcf6cc6f4d660.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025329s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001935s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002323s ]
+

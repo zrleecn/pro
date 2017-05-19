@@ -19,8 +19,7 @@ INSERT INTO category VALUES (8,'办公用品',0,'');
 INSERT INTO category VALUES (9,'玩具',0,'');
 INSERT INTO category VALUES (10,'宠物',0,'');
 INSERT INTO category VALUES (11,'服饰',0,'');
-INSERT INTO category VALUES (12,'植物',0,'');
-INSERT INTO category VALUES (13,'其他',0,'');
+INSERT INTO category VALUES (12,'其他',0,'');
 
 
 -- 商品表

@@ -165,16 +165,25 @@ class UserController extends Controller{
 
         $user = M('user') ;
         $uname = session('user_name') ;
+        // 查找用户收藏的商品的商品id
         $row = $user->where("user_name='$uname'")->field('collection_goods_id')->find() ;
       //  echo $row['collection_goods_id'] ;
-        //组织成数组
-        $arr_id = explode(',' , $row['collection_goods_id']) ;
+
+        if( $row['collection_goods_id']){
+            //收藏商品id组织成数组
+            $arr_id = explode(',' , $row['collection_goods_id']) ;
+        }else{
+            //如果用户还没有收藏的商品 则收藏id为空
+            $arr_id = array() ;
+        }
 
         if(! in_array($goods_id , $arr_id)){  // 还没有收藏
+            //把商品id 追加到收藏商品id数组中
             array_push($arr_id,$goods_id) ;
+            //收藏商品id转换成字符串
             $str_id = implode(',' , $arr_id) ;
             $data['collection_goods_id'] = $str_id ;
-
+            //更新用户收藏数据
             if($user->where("user_name='$uname'")->save($data)){
 
                 //修改商品收藏数量
