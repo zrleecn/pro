@@ -40,6 +40,7 @@ CREATE TABLE goods(
   is_hot tinyint unsigned DEFAULT 0 comment '热销',
   click_num int unsigned DEFAULT 0 comment '点击量',
   collect_num int unsigned DEFAULT 0 comment '收藏数量',
+  `contact` varchar(200) DEFAULT 'zrlee.cn' comment '改商品的发布者常用方式',
   `public_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '发布时间'
   )charset=utf8;
 
@@ -54,12 +55,12 @@ CREATE TABLE goods(
   INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 7,1,'无机化学与分析',8,20,'','images/huaxue.jpg','',0,0);
   INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 8,2,'山地车',230,300,'','images/xixingche.jpg','',1,1);
   INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 9,4,'乒乓球3个',1,3,'','images/ping.jpg','',1,1);
-  INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 10,13,'vr眼镜',40,80,'','images/vr.jpg','',1,1);
-  INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 11,1,'四级网工',5,18,'','images/xitong.jpg','',1 ,0);
+  INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 10,13,'vr眼镜',40,80,'','images/vr.jpg','',1,1);--
+ -- INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 11,1,'四级网工',5,18,'','images/xitong.jpg','',1 ,0);--
   INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 12,6,'迷你pooth台灯',3,13,'','images/booth.jpg','',1,1);
-  INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 13,9,'变形金刚',50,0,'','images/king.jpg','',0,1);
-  INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 14,9,'测试',50,0,'','images/king.jpg','',0 ,0);
-  INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 15,4,'滑轮鞋',100,200,'','images/hualun.jpg','',1 ,0);
+--  INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 13,9,'变形金刚',50,0,'','images/king.jpg','',0,1);
+ INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 14,9,'测试',50,0,'','images/king.jpg','',0 ,0);
+--  INSERT INTO goods (goods_id, cat_id, goods_name,shop_price,old_price, ori_image, thumb_image, goods_desc,is_hot ,collect_num) VALUES ( 15,4,'滑轮鞋',100,200,'','images/king.jpg','',1 ,0);
 
 -- 用户表
 DROP TABLE IF EXISTS `user`;
@@ -82,11 +83,11 @@ CREATE TABLE `user` (
   `qq_number`  VARCHAR (11) DEFAULT  '' ,
   `wechat`   VARCHAR (30) DEFAULT '' comment '微信',
   `address` VARCHAR (50) DEFAULT '' comment '地址',
-  `head_portrait` varchar(200) DEFAULT 'images/default_head.png',
+  `head_portrait` varchar(200) DEFAULT 'images/default_head.png' comment '头像',
   `order_goods_id` VARCHAR(100) comment '订单商品的id')charset=utf8;
 
 -- test data
-INSERT INTO user (user_id,user_name,password,register_time,public_goods_id,collection_goods_id,is_active,email,tel_phone,qq_number,wechat,school_name,head_portrait) VALUES (3,'admin','8f0f50d0cb6bef82dfd8ceafc4a12be4',1493397579,'8,9,10,11,12,13,15','8,9,12,13,15',1,'13005564315@163.com','13005564315','45418406','zrlee_cn','XXX大学','images/admin.png');
+INSERT INTO user (user_id,user_name,password,register_time,public_goods_id,collection_goods_id,is_active,email,tel_phone,qq_number,wechat,school_name,head_portrait) VALUES (3,'admin','8f0f50d0cb6bef82dfd8ceafc4a12be4',1493397579,'8,9,10,11,12,13','8,9,12,13',1,'13005564315@163.com','13005564315','45418406','zrlee_cn','XXX大学','images/admin.png');
 INSERT INTO user (user_id,user_name,password,register_time,public_goods_id,collection_goods_id,is_active,email,tel_phone,qq_number,wechat,school_name) VALUES (2,'sweetencounter','8f0f50d0cb6bef82dfd8ceafc4a12be4',1493397579,'1,2,3,4,5,6,7','8,9,10,11,12,13',1,'1316356119@qq.com','13005564315','45418406','zrlee_cn','XXX大学');
 INSERT INTO user (user_id,user_name,password,register_time,public_goods_id,collection_goods_id,is_active,email,tel_phone,qq_number,wechat,school_name) VALUES (4,'test','8f0f50d0cb6bef82dfd8ceafc4a12be4',1493397579,'','',1,'1316356119@qq.com','13005564315','45418406','zrlee_cn','广东石油化工学院');
 

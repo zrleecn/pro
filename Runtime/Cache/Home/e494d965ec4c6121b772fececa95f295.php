@@ -143,6 +143,10 @@
                 <td><?php echo ($userInfo["tel_phone"]); ?></td>
             </tr>
             <tr>
+                <td>常用联系</td>
+                <td><?php echo ($goodsInfo["contact"]); ?></td>
+            </tr>
+            <tr>
                 <td>qq号码</td>
                 <td><?php echo ($userInfo["qq_number"]); ?></td>
             </tr>

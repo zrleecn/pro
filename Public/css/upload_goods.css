@@ -31,7 +31,7 @@
 }
 
 /*web文字*/
-.upload-goods .form .fa-user ,.upload-goods .form  .fa-lock ,.upload-goods .form  .fa-envelope-o{
+.upload-goods .form .fa-user ,.upload-goods .form  .fa-lock ,.upload-goods .form  .fa-envelope-o ,.upload-goods .form fa-mobile{
     font-size: 18px;
     position: absolute;
     left:20px;

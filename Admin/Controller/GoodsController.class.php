@@ -14,7 +14,7 @@ use Think\Upload;
 class GoodsController extends CommonController {
 
     /**
-     * 上传商品展示页面
+     * 发布商品展示页面
      */
     public function upload_goods(){
         $goods = M('category') ;
@@ -25,9 +25,10 @@ class GoodsController extends CommonController {
     }
 
     /**
-     * 商品上传处理
+     * 商品发布处理
      */
     public function upload(){
+        //接收表单提交过来的数据
         $form_data = $_POST;
 
         $goodsModel = M('goods') ;
@@ -141,10 +142,10 @@ class GoodsController extends CommonController {
                 }
 
             }else{
-                $this->error('移除商品失败',U('Admin/Index/my'),1);
+                $this->error( $m->getError() ,U('Admin/Index/my'),1);
             }
         }else{
-            $this->error('移除商品失败',U('Admin/Index/my'),1);
+            $this->error( '商品图片删除失败' ,U('Admin/Index/my'),1);
         }
 
 
@@ -178,6 +179,7 @@ class GoodsController extends CommonController {
         if($m->where("user_name='$user_name'")->save($update) ){
             $this->success('移除成功！',U('Admin/Index/collection'));
         }else{
+
             $this->error('移除失败！',U('Admin/Index/collection'));
         }
 
